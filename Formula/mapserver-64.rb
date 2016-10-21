@@ -28,7 +28,7 @@ end
 class Mapserver64 < Formula
   homepage "http://mapserver.org/"
   url "http://download.osgeo.org/mapserver/mapserver-6.4.1.tar.gz"
-  sha1 "f7d2e7f44cd9a4ff5d9483d21bb71c1cc28e09ab"
+  sha256 "445915fd6e31ed199ce477edd1d9f32d609d3001cd52d3e458ff159543403d64"
 
   bottle do
     root_url "http://qgis.dakotacarto.com/osgeo4mac/bottles"
@@ -55,8 +55,8 @@ class Mapserver64 < Formula
   option "with-unit-tests", "Download and install full unit test suite"
 
   depends_on "cmake" => :build
-  depends_on :freetype
-  depends_on :libpng
+  depends_on "freetype"
+  depends_on "libpng"
   depends_on :python
   depends_on "swig" => :build
   depends_on JavaJDK if build.with? "java"
@@ -77,7 +77,7 @@ class Mapserver64 < Formula
 
   resource "sphinx" do
     url "https://pypi.python.org/packages/source/S/Sphinx/Sphinx-1.2.2.tar.gz"
-    sha1 "9e424b03fe1f68e0326f3905738adcf27782f677"
+    sha256 "2d3415f5b3e6b7535877f4c84fe228bdb802a8993c239b2d02c23169d67349bd"
   end
 
   resource "docs" do
